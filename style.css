@@ -1,0 +1,42 @@
+body {
+    background-color: #EFF1F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.amazing-alt {
+    display: inline-block;
+    min-width: 200px;
+    height: 50px;
+    position: relative;
+}
+
+.amazing-alt::before {
+    content: '';
+    width: 100%;
+    height: calc(100% + 10px);
+    background-color: #ccc;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: -2px;
+    transform: translateY(-50%);
+}
+
+.amazing-alt::after {
+    content: "\2639" " " attr(alt);
+    font-size: 18px;
+    color: rgb(100, 100, 100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
